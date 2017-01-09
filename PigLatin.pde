@@ -34,16 +34,20 @@ public String pigLatin(String sWord)
 	{
 		return sWord + "way";
 	}
-	//else if(findFirstVowel(sWord) == 2)
-	//{
-		sWord.substring(1, sWord.length()) + sWord.substring(0, 1) + "ay"
+	else if(findFirstVowel(sWord) == 2)
+	{
+		return sWord.substring(2, sWord.length()) + sWord.substring(0, 2) + "ay";
 				
-	//}
+	}
 	else if(findFirstVowel(sWord) == 1)
 	{
 		if(sWord.substring(0, 2).equals("qu"))
 			return sWord.substring(2, sWord.length()) + sWord.substring(0, 2) + "ay";
 		return sWord.substring(1, sWord.length()) + sWord.substring(0, 1) + "ay";
+	}
+	else if(findFirstVowel(sWord) == 3)
+	{
+		return sWord.substring(3, sWord.length()) + sWord.substring(0, 3) + "ay";
 	}
 	else
 	{
